@@ -11,7 +11,9 @@ public class Superliminal : MonoBehaviour
 	public float offsetFactor;          // The offset amount for positioning the object so it doesn't clip into walls
 
 	float originalDistance;             // The original distance between the player camera and the target
-	float originalScale;                // The original scale of the target objects prior to being resized
+	Vector3 originalScale;                // The original scale of the target objects prior to being resized
+	float ratiozx;
+	float ratioyx;
 	Vector3 targetScale;                // The scale we want our object to be set to each frame
 
 	void Start()
@@ -47,8 +49,13 @@ public class Superliminal : MonoBehaviour
 					// Calculate the distance between the camera and the object
 					originalDistance = Vector3.Distance(transform.position, target.position);
 
-					// Save the original scale of the object into our originalScale Vector3 variabble
-					originalScale = target.localScale.x;
+					// Save the original scale of the object into our originalScale Vector3 variable
+					// originalScale = target.localScale.x;
+					originalScale.x = target.localScale.x;
+					originalScale.y = target.localScale.y;
+					originalScale.z = target.localScale.z;
+					ratioyx = target.localScale.y / target.localScale.x;
+					ratiozx = target.localScale.z / target.localScale.x;
 
 					// Set our target scale to be the same as the original for the time being
 					targetScale = target.localScale;
@@ -91,10 +98,13 @@ public class Superliminal : MonoBehaviour
 			float s = currentDistance / originalDistance;
 
 			// Set the scale Vector3 variable to be the ratio of the distances
-			targetScale.x = targetScale.y = targetScale.z = s;
+			// targetScale.x = targetScale.y = targetScale.z = s;
+			targetScale.x = s;
+			targetScale.y = s * ratioyx;
+			targetScale.z = s * ratiozx;
 
 			// Set the scale for the target objectm, multiplied by the original scale
-			target.localScale = targetScale * originalScale;
+			target.localScale = targetScale * originalScale.x;
 		}
 	}
 }
