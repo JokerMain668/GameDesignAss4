@@ -45,6 +45,8 @@ public class Superliminal : MonoBehaviour
 
 					// Disable physics for the object
 					target.GetComponent<Rigidbody>().isKinematic = true;
+					// Disable collision
+					target.GetComponent<Collider>().enabled = false;
 
 					// Calculate the distance between the camera and the object
 					originalDistance = Vector3.Distance(transform.position, target.position);
@@ -66,6 +68,7 @@ public class Superliminal : MonoBehaviour
 			{
 				// Reactivate physics for the target object
 				target.GetComponent<Rigidbody>().isKinematic = false;
+				target.GetComponent<Collider>().enabled = true;
 
 				// Set our target variable to null
 				target = null;
