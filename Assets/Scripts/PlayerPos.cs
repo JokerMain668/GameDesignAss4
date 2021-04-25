@@ -16,12 +16,16 @@ public class PlayerPos : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void ResetToCheckpoint()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void ResetToBeginning()
+    {
+        gm.lastCheckPointPos = new Vector3(0f, 0f, 0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
