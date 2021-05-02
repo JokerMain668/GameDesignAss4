@@ -15,6 +15,7 @@ public class Superliminal : MonoBehaviour
 	float ratiozx;
 	float ratioyx;
 	Vector3 targetScale;                // The scale we want our object to be set to each frame
+	private float height;
 
 	void Start()
 	{
@@ -45,6 +46,9 @@ public class Superliminal : MonoBehaviour
 
 					// Disable physics for the object
 					target.GetComponent<Rigidbody>().isKinematic = true;
+
+					// Get height of target before collider disables
+					height = target.GetComponent<Collider>().bounds.size.y;
 					// Disable collision
 					target.GetComponent<Collider>().enabled = false;
 
@@ -92,7 +96,9 @@ public class Superliminal : MonoBehaviour
 		{
 			// Set the new position of the target by getting the hit point and moving it back a bit
 			// depending on the scale and offset factor
-			target.position = hit.point - transform.forward * offsetFactor * targetScale.x;
+			target.position = hit.point - transform.forward * offsetFactor * targetScale.x + 
+			new Vector3(0, height/2, 0);
+			
 
 			// Calculate the current distance between the camera and the target object
 			float currentDistance = Vector3.Distance(transform.position, target.position);
