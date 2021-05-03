@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CanvasControls : MonoBehaviour
 {
@@ -80,7 +81,7 @@ public class CanvasControls : MonoBehaviour
 
     public void exit_button()
     {
-        Application.Quit();
+        SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
     }
 
     public void retry_button()
