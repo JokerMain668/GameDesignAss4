@@ -1,114 +1,103 @@
 Using pre-set license
-Built from '2020.2/release' branch; Version is '2020.2.4f1 (becced5a802b) revision 12504301'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19041.928; Version 2004; 64bit' Language: 'en' Physical Memory: 8109 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Unity.exe
+/Applications/Unity/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Sean/Documents/GitHub/GameDesignAss4
+/Users/jaechung/Documents/GitHub/Untitled
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61418
-Successfully changed project path to: C:/Users/Sean/Documents/GitHub/GameDesignAss4
-C:/Users/Sean/Documents/GitHub/GameDesignAss4
+62348
+Successfully changed project path to: /Users/jaechung/Documents/GitHub/Untitled
+/Users/jaechung/Documents/GitHub/Untitled
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 52.04 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 33.86 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Sean/Documents/GitHub/GameDesignAss4/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/jaechung/Documents/GitHub/Untitled/Assets
 GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
-    Vendor:   
-    VRAM:     4054 MB
-    Driver:   27.20.100.8681
+2021-05-05 21:22:55.025 Unity[79566:3813991] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 640 (low power)
+2021-05-05 21:22:55.025 Unity[79566:3813991] Metal devices available: 1
+2021-05-05 21:22:55.025 Unity[79566:3813991] 0: Intel(R) Iris(TM) Plus Graphics 640 (low power)
+2021-05-05 21:22:55.026 Unity[79566:3813991] Using device Intel(R) Iris(TM) Plus Graphics 640 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 640
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
+Mono path[0] = '/Applications/Unity/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56566
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002489 seconds.
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 34.65 ms, found 0 plugins.
+Register platform support module: /Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.004048 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 28.21 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.451 seconds
+- Completed reload, in  3.209 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001158 seconds.
+Registered in 0.001439 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.195 seconds
+- Completed reload, in  1.285 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Launching external process: /Applications/Unity/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.26 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1235 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.6 MB.
-System memory in use after: 64.6 MB.
+Unloading 1238 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 117.2 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1677.
-Total: 5.133500 ms (FindLiveObjects: 0.211900 ms CreateObjectMapping: 0.053300 ms MarkObjects: 4.763300 ms  DeleteObjects: 0.102700 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1680.
+Total: 3.033732 ms (FindLiveObjects: 0.513538 ms CreateObjectMapping: 0.088927 ms MarkObjects: 2.355864 ms  DeleteObjects: 0.073952 ms)
 
 ========================================================================
 Received Import Request.
+  path: Assets/Scenes
+  artifactKey: Guid(37a82e990993fa644a3a368af5c29595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(37a82e990993fa644a3a368af5c29595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf358282c50cd52a02a6493aaf2db7b') in 0.004357 seconds
+  Import took 0.007186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
   path: Assets/ppp.asset
   artifactKey: Guid(6d673631f19f47f42ac5908e0b14f860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ppp.asset using Guid(6d673631f19f47f42ac5908e0b14f860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd306e3b5e79751e9d5f090f8c743814') in 0.136770 seconds
-  Import took 0.143119 seconds .
+Start importing Assets/ppp.asset using Guid(6d673631f19f47f42ac5908e0b14f860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a3c3ef0e442d40628549f3fc539c668') in 1.142839 seconds
+  Import took 1.144915 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001765 seconds.
+  Time since last request: 0.000225 seconds.
   path: Assets/Ground.physicMaterial
   artifactKey: Guid(a0f87fbaf308c00499c498e3835ce1df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ground.physicMaterial using Guid(a0f87fbaf308c00499c498e3835ce1df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eaa47fb059b414c1e50187a05db2fc1') in 0.036015 seconds
-  Import took 0.043420 seconds .
+Start importing Assets/Ground.physicMaterial using Guid(a0f87fbaf308c00499c498e3835ce1df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '625b0e73e842b0dd0ae098ec782ffd2b') in 0.529487 seconds
+  Import took 0.531790 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.500085 seconds.
-  path: Assets/Scenes/Daniel.unity
-  artifactKey: Guid(67e3d455ef3761848942fdd4c6d7350f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Daniel.unity using Guid(67e3d455ef3761848942fdd4c6d7350f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '942e00b96033325e79c6c35c2cbf583b') in 0.010389 seconds
-  Import took 0.013150 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013470 seconds.
-  path: Assets/Scenes/Daniel.unity
-  artifactKey: Guid(67e3d455ef3761848942fdd4c6d7350f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Daniel.unity using Guid(67e3d455ef3761848942fdd4c6d7350f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '942e00b96033325e79c6c35c2cbf583b') in 0.003486 seconds
-  Import took 0.007473 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.696644 seconds.
-  path: Assets/Scenes/Julian.unity
-  artifactKey: Guid(4650c1cd0f2e1774da5329869fc93f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Julian.unity using Guid(4650c1cd0f2e1774da5329869fc93f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e6b4d564e436f2ff84ba83e4bddf324') in 0.017916 seconds
-  Import took 0.021256 seconds .
+  Time since last request: 3.613618 seconds.
+  path: Assets/Scenes/Jae.unity
+  artifactKey: Guid(e79fb84ff9c1e48c0b04ec9ea173f92a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Jae.unity using Guid(e79fb84ff9c1e48c0b04ec9ea173f92a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb737400f471c2915f0d697f6aefb969') in 0.006333 seconds
+  Import took 0.009777 seconds .
 
