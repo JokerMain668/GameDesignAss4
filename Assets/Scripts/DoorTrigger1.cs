@@ -25,8 +25,11 @@ public class DoorTrigger1 : MonoBehaviour
     {
         if (!isOpened)
         {
-            isOpened = true;
-	    door.transform.position += new Vector3 (0, 13, 0);
+		if (col.gameObject.tag == "Trigger0")
+		{            
+			isOpened = true;		
+		    	door.transform.position += new Vector3 (0, 13, 0);			
+		}
         }
     }
 }
