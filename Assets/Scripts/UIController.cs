@@ -27,4 +27,23 @@ public class UIController : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
+
+    public void loadLevel2()
+    {
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Single);
+    }
+
+    public void loadLevel3()
+    {
+        SceneManager.LoadSceneAsync(4, LoadSceneMode.Single);
+    }
+
+    public void loadLevel4()
+    {
+        SceneManager.LoadSceneAsync(5, LoadSceneMode.Single);
+    }
+    public void loadLevel5()
+    {
+        SceneManager.LoadSceneAsync(6, LoadSceneMode.Single);
+    }
 }
