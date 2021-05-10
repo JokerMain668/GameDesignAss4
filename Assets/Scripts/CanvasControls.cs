@@ -22,6 +22,7 @@ public class CanvasControls : MonoBehaviour
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPos>();
+        DeactivateClearedMenu();
     }
     void Update()
     {
@@ -97,6 +98,7 @@ public class CanvasControls : MonoBehaviour
 
     public void retry_button()
     {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerPos.ResetToBeginning();
         DeactivateClearedMenu();
     }
