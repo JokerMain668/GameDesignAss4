@@ -9,24 +9,33 @@ public class CanvasControls : MonoBehaviour
 
     [SerializeField] private bool isPaused;
 
+    [SerializeField] private bool isSetting;
+
     private PlayerPos playerPos;
 
     [SerializeField] private GameObject WinScreenUI;
+
+    [SerializeField] private GameObject SettingScreenUI;
 
     public bool isCleared;
 
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPos>();
+        DeactivateClearedMenu();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Backspace) && !isCleared)
         {
             isPaused = !isPaused;
         }
 
-        if (isPaused)
+        if (isSetting && isPaused)
+        {
+            pauseMenuUI.SetActive(false);
+            SettingScreenUI.SetActive(true);
+        } else if (isPaused)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -43,8 +52,10 @@ public class CanvasControls : MonoBehaviour
         }
     }
 
-    void ActivatePauseMenu()
+    public void ActivatePauseMenu()
     {
+        isSetting = false;
+        SettingScreenUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -52,6 +63,7 @@ public class CanvasControls : MonoBehaviour
     void DeactivatePauseMenu()
     {
         pauseMenuUI.SetActive(false);
+        SettingScreenUI.SetActive(false);
         Time.timeScale = 1f;
     }
 
@@ -86,7 +98,13 @@ public class CanvasControls : MonoBehaviour
 
     public void retry_button()
     {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerPos.ResetToBeginning();
         DeactivateClearedMenu();
+    }
+
+    public void setting_button()
+    {
+        isSetting = true;
     }
 }
