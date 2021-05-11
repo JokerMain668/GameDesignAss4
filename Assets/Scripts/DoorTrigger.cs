@@ -15,7 +15,7 @@ public class DoorTrigger : MonoBehaviour
         if (!isOpened)
         {
             isOpened = true;
-            door.transform.position += new Vector3(0,0,5);
+            door.transform.position += new Vector3(0,0,20);
             plate.transform.position -= new Vector3(0,.05F,0);
         }
     }
@@ -24,7 +24,7 @@ public class DoorTrigger : MonoBehaviour
         if (isOpened)
         {
             isOpened = false;
-            door.transform.position -= new Vector3(0,0,5);
+            door.transform.position -= new Vector3(0,0,20);
             plate.transform.position += new Vector3(0,.05F,0);
         }
     }

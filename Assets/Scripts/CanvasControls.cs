@@ -82,6 +82,7 @@ public class CanvasControls : MonoBehaviour
     void ActivateClearedMenu()
     {
         WinScreenUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
     }
 
