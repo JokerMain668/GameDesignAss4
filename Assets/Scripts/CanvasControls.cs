@@ -40,15 +40,15 @@ public class CanvasControls : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             ActivatePauseMenu();
+        } else if (isCleared)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            ActivateClearedMenu();
         } else
         {
             Cursor.lockState = CursorLockMode.Locked;
             DeactivatePauseMenu();
-        }
-        if (isCleared)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            ActivateClearedMenu();
         }
     }
 
