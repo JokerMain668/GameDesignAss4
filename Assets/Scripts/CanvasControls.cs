@@ -81,6 +81,7 @@ public class CanvasControls : MonoBehaviour
 
     void ActivateClearedMenu()
     {
+        isCleared = true;
         WinScreenUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
@@ -88,6 +89,7 @@ public class CanvasControls : MonoBehaviour
 
     void DeactivateClearedMenu()
     {
+        isCleared = false;
         WinScreenUI.SetActive(false);
         Time.timeScale = 1f;
     }
