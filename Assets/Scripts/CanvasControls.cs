@@ -75,8 +75,8 @@ public class CanvasControls : MonoBehaviour
 
     public void checkpoint_button()
     {
-        playerPos.ResetToCheckpoint();
         DeactivatePauseMenu();
+        playerPos.ResetToCheckpoint(); 
     }
 
     void ActivateClearedMenu()

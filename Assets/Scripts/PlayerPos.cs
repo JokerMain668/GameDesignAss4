@@ -20,8 +20,9 @@ public class PlayerPos : MonoBehaviour
     // Update is called once per frame
     public void ResetToCheckpoint()
     {
-        gameObject.transform.position = gm.lastCheckPointPos;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameObject.transform.position = gm.lastCheckPointPos;
+        
         Cursor.lockState = CursorLockMode.Locked;
     }
 
