@@ -8,20 +8,18 @@ public class PlayerPos : MonoBehaviour
 
     private GameMaster gm;
     public Vector3 originalPos;
-    // Start is called before the first frame update
 
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        gameObject.transform.position = originalPos;
+        transform.position = gm.lastCheckPointPos;      
+        gameObject.transform.position = originalPos;       
     }
 
     // Update is called once per frame
     public void ResetToCheckpoint()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        gameObject.transform.position = gm.lastCheckPointPos;
-        
         Cursor.lockState = CursorLockMode.Locked;
     }
 
