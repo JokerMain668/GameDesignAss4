@@ -14,13 +14,14 @@ public class PlayerPos : MonoBehaviour
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
-        // gameObject.transform.position = originalPos;
+        gameObject.transform.position = originalPos;
     }
 
     // Update is called once per frame
     public void ResetToCheckpoint()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameObject.transform.position = gm.lastCheckPointPos;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
