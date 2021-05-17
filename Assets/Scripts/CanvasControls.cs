@@ -47,6 +47,8 @@ public class CanvasControls : MonoBehaviour
             ActivateClearedMenu();
         } else
         {
+            isSetting = false;
+            isPaused = false;
             Cursor.lockState = CursorLockMode.Locked;
             DeactivatePauseMenu();
         }
