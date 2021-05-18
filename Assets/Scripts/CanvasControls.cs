@@ -40,15 +40,17 @@ public class CanvasControls : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             ActivatePauseMenu();
-        } else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            DeactivatePauseMenu();
-        }
-        if (isCleared)
+        } else if (isCleared)
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             ActivateClearedMenu();
+        } else
+        {
+            isSetting = false;
+            isPaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            DeactivatePauseMenu();
         }
     }
 
@@ -75,18 +77,21 @@ public class CanvasControls : MonoBehaviour
 
     public void checkpoint_button()
     {
-        playerPos.ResetToCheckpoint();
         DeactivatePauseMenu();
+        playerPos.ResetToCheckpoint(); 
     }
 
     void ActivateClearedMenu()
     {
+        isCleared = true;
         WinScreenUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
     }
 
     void DeactivateClearedMenu()
     {
+        isCleared = false;
         WinScreenUI.SetActive(false);
         Time.timeScale = 1f;
     }

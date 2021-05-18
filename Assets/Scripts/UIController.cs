@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private PlayerPos playerPos;
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -21,11 +21,13 @@ public class UIController : MonoBehaviour
     public void loadTutLvl()
     {
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+       
     }
 
     public void loadLevel1()
     {
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+        
     }
 
     public void loadLevel2()
