@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RespawnObject : MonoBehaviour
+public class SphereRespawn : MonoBehaviour
 {
     private Vector3 scale, position;
     private Quaternion rotation;
@@ -18,13 +18,12 @@ public class RespawnObject : MonoBehaviour
     void Update()
     {
         //if (transform.position.x || transform.position.y || transform.position.z )
-        if (transform.position.y <= -5F)
+        if (transform.position.y <= -5F || transform.position.x >= -34.5F)
         {
             transform.position = position;
             transform.localScale = scale;
             transform.rotation = rotation;
-            GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,0f); 
-            GetComponent<Rigidbody>().angularVelocity = new Vector3(0f,0f,0f);
         }
     }
 }
+

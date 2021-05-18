@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RespawnObject : MonoBehaviour
+public class LevelAssist : MonoBehaviour
 {
     private Vector3 scale, position;
     private Quaternion rotation;
@@ -14,10 +14,15 @@ public class RespawnObject : MonoBehaviour
         rotation = transform.rotation;
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        //if (transform.position.x || transform.position.y || transform.position.z )
+        float dist = Vector3.Distance(new Vector3(-37.1988F, 3.69F, 6.68F),transform.position);
+        if (dist >= 1 || dist <= 1)
+        {
+            transform.position = new Vector3(-37.1988F, 3.69F, 6.68F);
+        }
         if (transform.position.y <= -5F)
         {
             transform.position = position;
